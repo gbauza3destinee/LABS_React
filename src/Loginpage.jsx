@@ -1,20 +1,12 @@
+import axios from "axios";
 
-
-// 1. Header that says login
-
-// 2. Input field thats for usernames
-
-// 3. Input field thats for passwords 
-
-// 4. Button that says Login 
-
-
-
+    async function getHandler() {
+        const response = await axios.get( ); 
+        console.log(response.data);
+    }
 
 
 // const Loginpage = {
-
-
 // return(
    // <React.Fragment> 
 
@@ -26,17 +18,10 @@
 
     <input id="password"> Password</input>
 
-    <button> Login </button>
+    <button onClick = {getHandler}> Login </button>
 
-</div>
+    </div>
     // </React.Fragment> 
 //)
 
-//};
-
-
-
-
-
-
-export default Loginpage;
+export default loginPage;

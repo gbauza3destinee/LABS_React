@@ -1,5 +1,11 @@
 import './App.css'
-import 'Homepage.jsx'
+import 'Homepage.jsx';
+import 'Loginpage.jsx';
+
+// Importing newly made files, once imported above can we use the tags below? 
+// What is required in the app class to be able to integrate the functionality 
+// of other components?
+
 
 function App() {
   
@@ -14,6 +20,7 @@ function App() {
    
     // For homepage
   <Homepage> </Homepage>
+  <Loginpage> </Loginpage>
 )}
 
 export default App

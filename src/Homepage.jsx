@@ -1,42 +1,23 @@
 import 'App';
 import React from 'react';
+import axios from "axios";
 
 
-
-    // to Review : 
+    // Questions: 
     // - What is the best practice file structure, do we declare it as a const object 
-    // or as 
-    // a no structure file that with elements. In the latter case does something
-    // need to be returned? 
-    // - Making An axios get call to route to a dashboard page contains a url that points 
-    // to a server url or the actual url to route to (dashbaord page)?
-    // - If I'm working with an object Assignment that needs to be displayed, 
-    // should I pass it in as a props into the class or does it need to be loaded from an
+    // or as this file is (no structure just elements)-- is it required to return smthg. 
+    // - If I'm working with an object 'Assignment' that needs to be displayed, 
+    // should I pass it into const as a props or does it need to be loaded from an
     //  axios post call?
+    // - What does the App class do with these tags of imported other components? 
 
 
-   /** 
-    * In backend, assignment is an object with fields : 
-    * 
-    * const assignment = {
-    * long id, 
-    * String status, 
-    * int number, 
-    * String githubURL, String branch,
-    * String reviewVideoUrl 
-    * User user
-    * }
-    */
+    async function getHandler(){
+        const response = await axios.get();
+        console.log(response.data);
 
-   /**
-    * Second way to create this class 
-    * 
-    * const homepageComponent = (Assignment assignment ){
-    *  return (
-    *    ELEMENTS GO IN HERE & I can use an assignment object inside my div 
-    * )
-    * }
-    */
+    }
+
 
 // Fragment is used bc requires a Parent Element 
 <React.Fragment>
@@ -51,26 +32,28 @@ import React from 'react';
     </div>
 
     <div className="bottom">
-        <button> Go to dashboard</button>
+        <button onClick={ getHandler}> Go to dashboard</button>
     </div>
 
 
 </React.Fragment>
 
 
-/**
- * Axios GET call 
- * - declare method async 
- * - method returns a response 
- * - post Assignment x 3 (wait on tom's response)
- * - get Dashboard URL -- what url 
- * 
- * const response = axios.get(" dashbaordurl.com ")
- * 
- * 
- * 
- * 
- */
+
+/** 
+    * In backend, assignment is an object with fields , should I pass
+    * an assignment into the const as a prop ? Or do I need to load from axios
+    * 
+    * const assignment = {
+    * long id, 
+    * String status, 
+    * int number, 
+    * String githubURL, String branch,
+    * String reviewVideoUrl 
+    * User user
+    * }
+    */
+
 
 
 export default Homepage.jsx;
