@@ -9,10 +9,10 @@ import axios from "axios";
     // - If I'm working with an object 'Assignment' that needs to be displayed, 
     // should I pass it into const as a props or does it need to be loaded from an
     //  axios post call?
-    // - What does the App class do with these tags of imported other components? 
+    // - What job does the App class have to integrate the other classes -- what logic is needed in that file to tie things up? 
 
 
-    async function getHandler(){
+    async function getHandler(){ // routes to dashboard page
         const response = await axios.get();
         console.log(response.data);
 
@@ -53,6 +53,16 @@ import axios from "axios";
     * User user
     * }
     */
+
+    /**
+     * Should state be used to create an object in jsx 
+     *   const [person, setPerson] = useState({
+    name: 'John Doe',
+    age: 30,
+    address: '123 Main St'
+  });
+     * 
+     */
 
 
 
