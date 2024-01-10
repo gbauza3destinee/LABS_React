@@ -1,26 +1,36 @@
 import './App.css'
-import 'Homepage.jsx';
-import 'Loginpage.jsx';
+// import LoginPage from './LoginPage';  // import a functoin
 
-// Importing newly made files, once imported above can we use the tags below? 
-// What is required in the app class to be able to integrate the functionality 
-// of other components?
-
+// Create a router object
+// Use route.move("/d") to route from login to dashboard
+// The entry point is app and from there we route to login 
+// From there login is routed to next page ('DASHBOARD')
+// Every comoponent is just a visual element occurring 
 
 function App() {
   
-  // 1. Create a div container 
-  // 2. Create a Header 
-  // 3. Create a button 
-  // 4. Extract homepage components to file
-  // 4. Create 3 boxes 
+
 
 
   return (
    
-    // For homepage
-  <Homepage> </Homepage>
-  <Loginpage> </Loginpage>
+  <div className="container">
+
+<h1> Login </h1>
+
+<input id="username"> Username </input>
+
+<input id="password"> Password</input>
+
+<button> Login </button>
+
+</div>
+
+
+
+
+
+  
 )}
 
 export default App
