@@ -1,22 +1,15 @@
 
 
 
-    // Send some data use POST -> Make another axios call for post to send username & password to 
-    // Send username and password to a backend service 
-    // backend needs to check in list to validate if username is present or not 
-    // and if its the correct 
-    // Create logic for happy case of valid username and password and edgecase 
-    // From UI (Login page) pass username and password to backend application
+    /**
+     * Axios Calls 
+     *  - Send data to login -> Post call passing data to backend -> Backend validates user + pass combo 
+     *      - Returns a Response object that contains : status code, headers, data. 
+     *      - Add if else logic to catch errors or successes
+     * 
+     */
 
-
-    // async function postHandler(){
-    //  const response = await axios.post();
-    // LOGIC commumnicating with backend service 
-    // if (response.data == )
-    //  console.log(response.data);
-    //}
-
-    // create a function
+  
 
     function LoginPage(){
 
@@ -43,4 +36,3 @@
   
 
 export default LoginPage;
-// export the actual function 
