@@ -1,3 +1,4 @@
+import React from "react";
 
 class Assignment extends React.Component{
 
@@ -6,14 +7,14 @@ class Assignment extends React.Component{
 
         super()
 
-        this.state { 
-            id : " 1", 
-            status: "Ready",
-            number : 3,
-            githubUrl : "www.google.com",
-            branch : "dev",
-            video: "www.vimeo.com",
-            user: null;
+        this.state = { 
+            "id": " 1", 
+            "status": "Ready",
+            "number": 3,
+            "githubUrl": "www.google.com",
+            "branch": "dev",
+            "video": "www.vimeo.com",
+            "user": null
         }
 
 
@@ -23,11 +24,12 @@ class Assignment extends React.Component{
     render(){
 
         return(
-            <div> {assignment} </div>
+            <div> </div>
 
         );
     }
 
 
-
 }
+
+export default Assignment;

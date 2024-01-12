@@ -1,60 +1,82 @@
+import Assignment from "./Assignment";
+import React from "react";
+
+// TODO: 
+// Add data to other assignments
+// Add span for other properties that i want to display 
+// 
 class HomePageClass extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      assignmentlist: null,
+    };
 
+    console.log("Inside constructor");
+  }
 
-    constructor(assignmentlist){
+  // makes api axios calls 
+  componentDidMount() {
+    console.log("Inside Component Did Mount ");
 
-        super()
-        this. state = {
-            assignmentlist : null
-        }
+    this.setState({
+      assignmentList: [{ 
+        "name": "A1",
+        "id": " 1", 
+        "status": "Ready",
+        "number": 3,
+        "githubUrl": "www.google.com",
+        "branch": "dev",
+        "video": "www.vimeo.com",
+        "user": null
+    }, 
+    {  
+    "name": "A2",
+    "id": " 2", 
+    "status": "Ready",
+    "number": 3,
+    "githubUrl": "www.google.com",
+    "branch": "dev",
+    "video": "www.vimeo.com",
+    "user": null 
+    }, 
+    { 
+    "name": "A3",
+    "id": "3", 
+    "status": "Ready",
+    "number": 3,
+    "githubUrl": "www.google.com",
+    "branch": "dev",
+    "video": "www.vimeo.com",
+    "user": null}],
+    });
 
-    }
+  }
 
+// loads presentational component has html elements 
+  render() {
+    console.log("Inside render");
+    console.log(this.state.assignmentList);
+    return (
+      <div>
+        <h2> Welcome to the Assignment Review App </h2>
 
-    async getAssignment(assignmentlist){
-        const response = await axios.get()
-        if (response.data != null){
+            { (this.state.assignmentList !=null && this.state.assignmentList.length > 0) ?
+            this.state.assignmentList.map((assignment,index) =>(<Assignment key={index}> 
+                <span>{assignment.name} </span>
+                <span>{assignment.id}</span>
+                <span> {assignment.branch}</span>
+                <span> {assignment.number}</span>
+                <span> {assignment.githubUrl}</span>
+                <span> {assignment.video} </span>
 
-            assignmentList = response.data;
+            </Assignment>)) 
+             : <div> No Assignments</div>}
+        <button> Go to Dashboard </button>
+      </div>
+    );
 
-            for ( let i = 0; i < assignmentList.length; i++){
-                return assignmentlist.get(i);
-            }
-        }
-    }
-
-
-    
-    
-  
-
-        render(){
-
-
-            return(
-                <div> 
-                
-                <H1> Welcome to the Assignment Review App </H1>
-
-                {getAssignment}
-
-                {getAssignment}
-
-                {getAssignment}
-
-                <button> Go to Dashboard</button>
-
-                 </div>
-            );
-            
-            
-
-        }
-    
-
-
-
-
+  }
 }
 
 export default HomePageClass;

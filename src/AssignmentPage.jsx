@@ -3,7 +3,7 @@ import Axios from "axios";
 class AssignmentPage extends React.Component {
 
 
-    constructor(assignmentList){
+    constructor(){
         super()
         this.state = { 
             assignmentList : null
@@ -12,8 +12,8 @@ class AssignmentPage extends React.Component {
     }
 
 
-    getAssignment(){
-        const response = axios.get();
+    async getAssignment(){
+        const response = await axios.get();
         if (response.data != null){
 
             assignmentList = response.data;
@@ -24,8 +24,8 @@ class AssignmentPage extends React.Component {
         }
     }
 
-    postAssignment( assignment ){
-        const response = axios.post(assignment );
+    async postAssignment( assignment ){
+        const response =  await axios.post(assignment );
 
     }
 

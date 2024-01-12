@@ -1,3 +1,4 @@
+import HomePageClass from './HomePageClass'
 import './App.css'
 // import LoginPage from './LoginPage';  // import a functoin
 
@@ -16,13 +17,7 @@ function App() {
    
   <div className="container">
 
-<h1> Login </h1>
-
-<input id="username"> Username </input>
-
-<input id="password"> Password</input>
-
-<button> Login </button>
+    <HomePageClass> </HomePageClass>
 
 </div>
 
