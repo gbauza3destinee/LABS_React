@@ -1,33 +1,53 @@
 
 
-     /* 
-     * const response = axios.get();
-     *      Array of responses 
-     *      Show all data 
-     *      - State of assignment 
+    
+    /**
+     * Notes: 
+     *  - Review HomePage & Learner Asignnment Page assignment mapping 
      */
 
-     // Add into return statement a div 
-     // <div> getAssignment(); 
-     // this.getAssignmentList.map(assignment => Assignment data = {assignment} </div> )
+    let assignments = [
+        {
+            id : "1",
+            number : "1",
+            branch: "DEV",
+            status: "ENTER",
+            reviewVideoUrl: "www.google.com",
+            githubUrl : "www.github.com/username/repo",
+            User : "user"
 
-    class HomePage extends React.Component {
+        },
+        {
+            id : "2",
+            number : "2",
+            branch: "DEV",
+            status: "ENTER",
+            reviewVideoUrl: "www.google.com",
+            githubUrl : "www.github.com/username/repo",
+            User : "user"
 
-        constructor(){
-            this.state = {
-                assignment = null;
-            };
+        },
+        {
+            id : "3",
+            number : "3",
+            branch: "DEV",
+            status: "ENTER",
+            reviewVideoUrl: "www.google.com",
+            githubUrl : "www.github.com/username/repo",
+            User : "user"
 
         }
 
-        getAssignment(){
-            axios.get()
-            .then(response => this.setState(assignmentList : response.data))
-        }
-        render(){
-            return (
+    ]
 
-        
+    function HomePage(){
+
+        return (
+         
+           
+
+            // In Flexbox container contains logic for mapping assignment
+            // 
             <div className="container">
 
             <div className="header">
@@ -36,10 +56,17 @@
         
             <div className="flexbox-container"> 
 
+                <div>  
+                   
+                   assignments.map((assignments, assignment) => )
+                   
+                   <div > {assignment} </div>
+                   <div> {assignment} </div>
+                   <div> {assignment} </div>
+
+                </div> 
+
              
-                <div> Assignment1</div> 
-                <div> Assignment2</div>
-                <div> Assignment3 </div>
             </div>
         
             <div className="bottom">
@@ -49,13 +76,11 @@
             </div>
        
 
-       );
-     }
-        
+        );
+
 
     }
 
-   
    
     export default HomePage;
 
