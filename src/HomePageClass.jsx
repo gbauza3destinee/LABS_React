@@ -1,9 +1,9 @@
 import Assignment from "./Assignment";
 import React from "react";
 
-// TODO: 
-// Add data to other assignments
-// Add span for other properties that i want to display 
+// Learned: 
+// to pass props we can reference a prop being passed into a function(prop)
+// or we can use what vars are declared within the class (this.state.assignmentList)
 // 
 class HomePageClass extends React.Component {
   constructor() {

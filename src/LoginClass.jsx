@@ -5,14 +5,11 @@ class LoginClass extends React.Component {
         this.state = {
             username : "",
             password : "",
-            token: " ";
-        }
+            token: " "
+        };
     }
 
-    async handleLogin(){
-        const response = await axios.post(www.google.com, username, password);
 
-    }
 
 
     checkToken() {

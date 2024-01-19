@@ -1,6 +1,5 @@
-import HomePageClass from './HomePageClass'
 import './App.css'
-// import LoginPage from './LoginPage';  // import a functoin
+import HomePageClass from './HomePageClass'
 
 // Create a router object
     // Use route.move("/d") to route from login to dashboard
@@ -18,7 +17,6 @@ function App() {
   <div className="container">
 
     <HomePageClass> </HomePageClass>
-
 </div>
 
 
